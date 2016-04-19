@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>Webpack Angular App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+    <body ng-controller="MainController as main">
+        <div id="page">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li ui-sref-active="active">
+                            <a ui-sref="home">Home</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="about">About</a>
+                        </li>
+                    </ul>
+                    <div class="btn-group pull-right" style="padding-top: 7px;">
+                        <a ui-sref="registration" class="btn btn-default">
+                            Registration
+                        </a>
+                        <a ui-sref="signin" class="btn btn-default">
+                            Sign In
+                        </a>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </nav>
+            <div id="content">
+                <breadcrumbs list="main.breadcrumbs.list"></breadcrumbs>
+                <div ui-view></div>
+                <div class="spinner" ng-if="main.preloader">
+                    <div class="spinner-loader"></div>
+                </div>
+            </div>
+            <alerts list="main.alerts.list" delete="main.alerts.remove"></alerts>
+        </div>
+        <script src="/js/common.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>
