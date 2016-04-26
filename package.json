@@ -27,6 +27,7 @@
     "jquery": "^2.2.0",
     "kerberos": "0.0.18",
     "lodash": "^4.1.0",
+    "mongojs": "^2.3.0",
     "mongoose": "^4.4.0"
   },
   "devDependencies": {

@@ -1,17 +1,26 @@
-import breadcrumbs from './../../../common/service/Breadcrumbs';
 
 class UserRegistrationController {
-    constructor($scope, Breadcrumbs) {
-        this.init($scope, Breadcrumbs);
-    }
-    init($scope, Breadcrumbs) {
-        Breadcrumbs.clear()
-            .add('Home', 'home')
-            .add('Registration');
+    constructor($scope, $http) {
+        this.init($scope, $http);
 
+    }
+    init($scope, $http) {
         $scope.title = 'Registration';
+        $scope.addUser = function() {
+            console.log($scope.user);
+            $http.post('/userRegister', $scope.user).success(function(response){
+                console.log(response);
+            });
+
+        };
+        $scope.user = {
+            firstName: "",
+            secondName: "",
+            email: "",
+            password: ""
+        };
     }
 }
 
 
-export default ['$scope', breadcrumbs, UserRegistrationController];
+export default ['$scope','$http', UserRegistrationController];

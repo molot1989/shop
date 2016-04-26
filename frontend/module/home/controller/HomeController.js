@@ -1,15 +1,13 @@
-import breadcrumbs from './../../../common/service/Breadcrumbs';
 
 class HomeController {
-    constructor($scope, Breadcrumbs) {
-        this.init($scope, Breadcrumbs);
+    constructor($scope) {
+        this.init($scope);
     }
-    init($scope, Breadcrumbs) {
-        Breadcrumbs.clear();
+    init($scope) {
         $scope.title = 'Home page';
     }
 }
 
 
 
-export default ['$scope', breadcrumbs, HomeController];
+export default ['$scope', HomeController];
