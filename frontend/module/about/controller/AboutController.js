@@ -1,4 +1,3 @@
-
 class AboutController {
     constructor($scope) {
         this.init($scope);
@@ -9,4 +8,4 @@ class AboutController {
     }
 }
 
- export default ['$scope', AboutController];
+export default ['$scope', AboutController];

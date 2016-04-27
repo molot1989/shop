@@ -8,5 +8,4 @@ export default angular
     .config(routes)
     .controller('UserRegistrationController', UserRegistrationController)
     .controller('UserSigninController', UserSigninController)
-
     .name;
