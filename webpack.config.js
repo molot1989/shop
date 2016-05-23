@@ -52,7 +52,11 @@ module.exports = {
         }, {
             test: /\.json$/,
             loader: 'file?name=[path][name].[ext]'
-        }]
+        }, {
+            test: /\.(png|jpg|jpeg|gif|woff)$/,
+            loader: 'file'
+        }
+        ]
 
     }
 };

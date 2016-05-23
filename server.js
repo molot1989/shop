@@ -11,6 +11,9 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use('/image', express.static(__dirname + '/image'));
+app.use('/image/Milk.jpg', express.static(__dirname + '/image/Milk.jpg'));
+
 app.post('/userRegister', function(req, res) {
     console.log(req.body);
     db.users.insert(req.body, function (err, docs) {
