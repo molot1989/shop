@@ -1,15 +1,11 @@
-import breadcrumbs from './../../../common/service/Breadcrumbs';
 
 class UserSigninController {
-    constructor($scope, Breadcrumbs) {
-        this.init($scope, Breadcrumbs);
+    constructor($scope) {
+        this.init($scope);
     }
-    init($scope, Breadcrumbs) {
-        Breadcrumbs.clear()
-            .add('Home', 'home')
-            .add('Sign in');
+    init($scope) {
         $scope.title = 'Sign in';
     }
 }
 
-export default ['$scope', breadcrumbs, UserSigninController];
+export default ['$scope', UserSigninController];
