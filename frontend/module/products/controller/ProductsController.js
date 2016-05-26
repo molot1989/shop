@@ -4,7 +4,7 @@ class ProductsController {
     }
     init($scope) {
         $scope.items = [
-            { itemName: "Milk", itemCategory: "Dairy", itemPrice: 1.40, image: require("../../../image/Milk.png")  },
+            { itemName: "Milk", itemCategory: "Dairy", itemPrice: 1.40, image: require("../../../image/Milk.png"), url:"/milk"  },
             { itemName: "Cheese", itemCategory: "Dairy", itemPrice: 2.40, image: require("../../../image/Cheese.jpg") },
             { itemName: "Water", itemCategory: "Drinks", itemPrice: 1.20, image: require("../../../image/Water.jpg") },
             { itemName: "Juice", itemCategory: "Drinks", itemPrice: 3.30, image: require("../../../image/Juice.jpg") },
