@@ -4,12 +4,16 @@ class ProductsController {
     }
     init($scope) {
         $scope.items = [
-            { itemName: "Milk", itemCategory: "Dairy", itemPrice: 1.40, image: require("../../../image/Milk.png"), url:"/milk"  },
-            { itemName: "Cheese", itemCategory: "Dairy", itemPrice: 2.40, image: require("../../../image/Cheese.jpg") },
-            { itemName: "Water", itemCategory: "Drinks", itemPrice: 1.20, image: require("../../../image/Water.jpg") },
-            { itemName: "Juice", itemCategory: "Drinks", itemPrice: 3.30, image: require("../../../image/Juice.jpg") },
-            { itemName: "Potato", itemCategory: "Vegetable", itemPrice: 5.90, image: require("../../../image/Potato.jpg") },
-            { itemName: "Tomato", itemCategory: "Vegetable", itemPrice: 6.88, image: require("../../../image/Tomato.jpg") }
+            { itemName: "Платье", itemCategory: "dress", image: require("../../../image/dress.jpg"), url:"/dress"  },
+            { itemName: "Костюмы", itemCategory: "costume", image: require("../../../image/costume.jpg"), url:"/costume" },
+            { itemName: "Блузки", itemCategory: "Drinks", itemPrice: 1.20, image: require("../../../image/dress.jpg") },
+            { itemName: "Туники", itemCategory: "Drinks", itemPrice: 3.30, image: require("../../../image/costume.jpg") },
+            { itemName: "Юпки", itemCategory: "Vegetable", itemPrice: 5.90, image: require("../../../image/dress.jpg") },
+            { itemName: "юпки", itemCategory: "Vegetable", itemPrice: 6.88, image: require("../../../image/costume.jpg") },
+            { itemName: "Юпки", itemCategory: "Vegetable", itemPrice: 5.90, image: require("../../../image/dress.jpg") },
+            { itemName: "юпки", itemCategory: "Vegetable", itemPrice: 6.88, image: require("../../../image/costume.jpg") },
+            { itemName: "Юпки", itemCategory: "Vegetable", itemPrice: 5.90, image: require("../../../image/dress.jpg") },
+            { itemName: "юпки", itemCategory: "Vegetable", itemPrice: 6.88, image: require("../../../image/costume.jpg") }
         ];
     }
 }
