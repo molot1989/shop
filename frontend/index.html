@@ -11,22 +11,31 @@
                 <div class="container-fluid" ng-controller="ProductsController">
 
                     <ul class="nav navbar-nav">
-                        <li ui-sref-active="active">
-                            <a ui-sref="products">Главная</a>
+                        <!--<li ui-sref-active="active">-->
+                            <!--<a ui-sref="products">Главная</a>-->
+                        <!--</li>-->
+                        <li ng-repeat="item in products" ui-sref-active="active">
+                            <a ui-sref="{{item.url}}">{{item.name}}</a>
                         </li>
-                        <li ng-repeat="item in items" ui-sref-active="active">
-                            <a ui-sref="{{item.url}}">{{item.itemName}}</a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="about">Контакты</a>
-                        </li>
+                        <!--<li ui-sref-active="active">-->
+                            <!--<a ui-sref="about">Контакты</a>-->
+                        <!--</li>-->
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Поиск">
                         </div>
                     </form>
-
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li ui-sref-active="active">
+                                <a ui-sref="products">Главная</a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="about">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="btn-group pull-right" style="padding-top: 7px;">
                         <a ui-sref="registration" class="btn btn-default">
                             Регистрация

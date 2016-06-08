@@ -4,13 +4,19 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('shop', ['users']);
+var db = mongojs('shop', ['users','products']);
 var bodyParser = require('body-parser');
 var PORT = process.env.PORT || 8080;
 
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.get('/products', function(req, res){
+    db.products.find(function(err, docs){
+        console.log(docs);
+        res.json(docs);
+    });
+});
 app.use('/image', express.static(__dirname + '/image'));
 app.post('/userRegister', function(req, res) {
     console.log(req.body);
